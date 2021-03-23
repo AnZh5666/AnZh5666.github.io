@@ -1,0 +1,522 @@
+/*обнуляет предустановки по отступам и устанавливает
+шрифт дл всего текста*/
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #222222;
+}
+
+/*правило*/
+.clearfix:after {
+    content: '';
+    display: table;
+    width: 100%;
+    clear: both;
+
+}
+div {
+    box-sizing: border-box;
+}
+/*картинка заголовка*/
+header {
+    background: url(../img/Back.png) no-repeat center top / cover;
+   padding-bottom: 160px;
+   height: 80vh;
+}  
+
+.container {
+    width: 930px;
+    margin: 0 auto;
+
+}
+.lab {
+    margin-top: 41px;
+    float: left; /*расположение логотипа*/
+    
+}
+/*Расположение верхнего меню*/
+nav {
+    float: right;
+    margin-top: 30px;
+}
+.menu li {
+    float: left;
+    display: block;
+    margin-right: 25px;
+}
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase; /*чтобы сделать все буквы
+    заглавными*/
+    font-size: 14px;
+    }
+    .titles_first {
+        font-size: 40px;
+        color: seashell;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 180px;
+    }
+    h1 {
+        font-size: 75px;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 15px;
+    }
+    /*создание кнопки*/
+    .button {
+        background: #fed136;
+        color: #000000;
+        border-radius: 5px; /*радиус закругления краев кнопки*/
+        display: block;
+        width: 240px;
+        padding: 20px 0;
+        margin: 0 auto;
+        text-decoration: none;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 50px;
+    }
+    .title {
+        padding-top: 115px;
+
+    }
+    .title h2 {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0; 
+            }
+    .title p {
+        color: #777777;
+        text-align: center;
+        font-size: 16px;
+        margin-top: 5px ;
+    }
+    .services {
+        margin-top: 50px;
+    }
+    /*центрование блоков c иконками*/
+    .services_item {
+        width: 300px;
+        float: left;
+        text-align: center;
+    }
+    .services_item h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .services_item p {
+        font-size: 14px;
+        color: #777777;
+        line-height: 1,55em;
+    }
+    .services_item:last-child {
+        float: right
+    }
+    .services_item:nth-child(2) {
+        margin-left: 15px;
+    }
+    #services {
+        padding-bottom: 120px;
+    }
+    .title {
+        padding-top: 115px; /*отступ сверху заголовка*/
+        }
+        
+        .title h2 {/*установка размера и жирности
+            для заголовков h2*/
+            font-size: 40px;
+            font-weight: bold;/*жирный шрифт*/
+            text-align: center;
+            text-transform: uppercase;/*все заглавные*/
+            margin: 0;/*обнуление предустановленных отступов*/
+        
+        }
+        
+        .title p { /*установки для текста под заголовком*/
+            color: #777777;
+            font-family: "Droid Serif";
+            font-size: 16px;
+            font-style: italic;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .Portfolio_block {
+            background-color: #f7f7f7;
+        }
+        .portfolio_item {/* установки размера блока с фото
+            по горизонтали*/
+            width: 300px;
+            float: left;
+            text-align: center;
+            margin-bottom: 20px;
+               
+        }    
+        
+        .portfolio_item h3 {/*установки для заголовка h3*/
+            color: #333333;
+            font-family: Montserrat;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 4px;
+        }
+        .portfolio_item p {/*установки для текста под
+            заголовком h3*/
+            color: #737373;
+            font-family: "Droid Serif";
+            font-size: 14px;
+            font-style: italic;
+            text-align: center;
+            margin: 0;
+        }
+        .portfolio_item:last-child {
+            float: right;
+            
+        }
+        
+        
+        .portfolio_item:nth-child(2) {
+            margin-left: 20px;
+        }
+        .About_us-block {
+            background: #ffffff;
+            }
+        .title { margin-bottom: 90px;}
+              
+               
+        .about_item {
+            display: flex;
+            width: auto;
+            text-align: center;
+          
+        }
+
+        .about-text {
+            float: left;
+            width: 315px;
+            height: 168p;
+            margin-right: 47px;
+            margin-top: 0;
+            margin-bottom: 0;
+           
+        }
+        .about-text h3 {
+            color: #333333;
+            font-family: Montserrat;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: right;
+            margin-bottom: 4px;
+            font-style: none;
+           
+        }
+        .about-text p {
+
+            color: #737373;
+            font-family: "Droid Serif";
+            font-size: 14px;
+            font-style: italic;
+            text-align: right;
+          
+        }
+        .ft_phone {
+            border: 5px solid rgb(238, 235, 235);
+            border-radius: 100%;
+            margin: 0;
+            padding: 0;
+           
+         }
+
+         .ft_more {
+            display: block;
+            float: left;
+            border: 5px solid rgb(238, 235, 235);
+            border-radius: 100%;
+            margin-left: 22.5rem;
+            height: 160px;
+            margin-right: 47px;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0;
+            
+}
+
+    .vertical-line {
+        display: inline-block;
+        margin-left: 27.8rem;
+        padding: 0;
+        margin-bottom: 0;
+    }
+         .about-text_2 {
+            display:block;
+            color: #737373;
+            font-family: "Droid Serif";
+            font-size: 14px;
+            text-align:left;
+           
+        }
+        .about-text_2 h3 {
+            color: #333333;
+            font-family: Montserrat;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+           
+        }
+        .about-text_2 p {
+            color: #737373;
+            font-family: "Droid Serif";
+            font-size: 14px;
+            font-style: italic;
+            text-align: left;
+        }
+        .about_b2 {
+            padding: 0;
+            margin: 0;
+            width: auto;
+            
+        }
+
+        .about_b3 {
+         margin: 0;   
+         display: flex;
+         width: auto;
+         text-align: center; 
+         padding: 0;     
+            
+        }
+        .ft_hend {
+            display: block;
+            border: 5px solid rgb(238, 235, 235);
+            border-radius: 100%;
+            margin-right: 25rem;
+            margin-top: 0;
+            padding: 0;
+            transform: translateY(-1%);
+            -webkit-transform: translateY(-1%);
+            -moz-transform: translateY(-1%);
+            -ms-transform: translateY(-1%);
+            -o-transform: translateY(-1%);
+}
+
+        .about-text_3 {
+            display: block;
+            float: left;
+            color: #737373;
+            font-family: "Droid Serif";
+            font-size: 14px;
+            text-align: right;
+            margin-right: 47px;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0;
+            
+        }
+        
+        .about-text_3 h3 {
+            color: #333333;
+            font-family: "Droid Serif";
+            font-size: 18px;
+            font-weight: 700;
+                     
+
+        }
+        .about-text_3 p {
+            color: #737373;
+            font-family: "Droid Serif";
+            font-size: 14px;
+            font-style: italic;
+            text-align: right;
+        }
+        .last-about {
+            display: block;
+            border: 5px solid rgb(238, 235, 235);
+            border-radius: 100%;
+            width: 18%;
+            height: 160px;
+            margin-left: 22.5rem;
+            text-align: center;
+            background-color: #fdc713f3;
+            color: #ffffff;
+            padding-top: 20px;
+            transform: translatey(-5%);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8rem;
+        }
+        .amazing-team {
+            background-color: #f9f9f9;
+            padding: 5rem;
+        }
+        .amazing-title h2 {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0; 
+            padding: 0;
+        }
+        .amazing-title p {
+            color: #777777;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 5rem;
+        }
+
+        .employe {
+            display: inline-block;
+            text-align: center;
+            padding: 0;
+            margin-right:5rem;
+            
+         }
+         .employe h3 {
+            line-height: 0.5rem;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .employe p {
+            line-height: 0.5rem;
+            font-size: 16px;
+            font-style: italic;
+        }
+        .employe-one {
+            text-align: center;
+        }
+        .staff {
+            border-radius: 100%;
+            border: 1px solid gold;
+            background-color: #111111;
+}
+.social-web {
+    text-align: center;
+}
+.twitter {
+    display: inline-block;
+    border-radius: 100%;
+    padding: 7px;
+    border: 4px solid black;
+    margin-right: 8px;
+}
+.facebook {
+    display: inline-block;
+    border-radius: 100%;
+    border: 4px solid black;
+    padding: 7px;
+    margin-right: 8px;
+}
+.google {
+    display: inline-block;
+    border-radius: 100%;
+    border: 4px solid black;
+    padding: 7px;
+    margin-right: 8px;
+}
+.amazing-subtitle {
+    text-align: center;
+    color: #737373;
+    font-size: 18px;
+    margin-top: 5rem;
+    font-weight: 100;
+}
+.label {
+    display: inline-block;
+    margin: 4rem 0rem 2rem 4rem;
+}
+
+.web-redactor {
+    padding-bottom: 2rem;
+}
+
+.contact_us {
+    background: hsla(0, 0%, 0%, 0.96) url(/img/Map.png) right no-repeat;
+    background-size: contain;
+    padding-bottom: 5rem;
+    
+}
+.contact_title h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 5rem;
+    margin: 0;
+    }
+    .contact_title p {
+        color: rgba(255, 255, 255, 0.871);
+        font-style: italic;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 2rem;
+        font-weight: bold;
+    }
+
+    .form {
+        text-align: center;
+    }
+    .contact_form {
+        display: inline-block;
+    }
+    .contact-input {
+       display: block;
+       margin-bottom:1rem;
+       width: 100%;
+       padding: 1.1rem 5rem 1.1rem 0.5rem;
+       border: none;
+       border-radius: 5px;
+       text-align: left;
+       text-transform: uppercase;
+       font-size: 12px;
+       color: hsla(0, 0%, 100%, 0.529);
+    }
+    .contact-message {
+       display: inline-block;
+        transform: translateY(11%);
+         text-align: left;
+         color:hsla(0, 0%, 100%, 0.529);
+}
+.message {
+    border: none;
+    border-radius: 5px; 
+    padding: 1rem 5rem;
+    margin-left: 7rem;
+    
+}
+    .contact-button {
+        background: #fed136;
+        color: #000000;
+        border-radius: 5px; /*радиус закругления краев кнопки*/
+        display: block;
+        width: 200px;
+        padding: 20px 50px;
+        margin: 0 auto;
+        text-decoration: none;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+    footer {
+        padding: 3rem;
+    }
+    
+    .footer-text {
+     display: inline-block;
+     transform:translateY(210%);
+    }
+   
