@@ -6,4 +6,4 @@
 
 [Промо страница iPhone12](https://anzh5666.github.io/Promo_iPhone2/ "Промо страница iPhone12 Plus")
 
-[Сайт интерент магазина Wb]( "магазин wilberies")
+[Сайт интерент магазина Wb](https://anzh5666.github.io/wb_shop/ "магазин wilberies")
