@@ -1,11 +1,41 @@
 "use strict";
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
   /* Запускает код в строгом режиме, т.е. не позволяет 
   запустить с ошибками и не объявленными переменными */
 
+  /* Пишем функцию  обращения к data base серверa через JSON  */
+
+  var getData = function getData(url, callback) {
+    var request = new XMLHttpRequest();
+    request.open('GET', url);
+    request.send();
+    request.addEventListener('readystatechange', function () {
+      if (request.readyState !== 4) return;
+
+      if (request.status === 200) {
+        var response = JSON.parse(request.response);
+        callback(response);
+      } else {
+        console.error(new Error('Ошибка ' + request.status));
+      }
+    });
+  };
+  /*  getData('cross-sell-dbase/dbase.json', (data) => {
+     console.log(data);
+   }); */
+
   /* ПИШЕМ ВТОРОЙ ВАРИАНТ ТАБОВ */
+
 
   var tabs = function tabs() {
     /* Получем переменные по классам */
@@ -24,17 +54,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var data = [{
       name: 'Смартфон Apple iPhone 12 Pro 128GB Graphite',
-      img: '/img/iPhone-graphite.png',
+      img: 'img/iPhone-graphite.png',
       price: 99990,
       memory: 128
     }, {
       name: 'Смартфон Apple iPhone 12 Pro 256GB Silver',
-      img: '/img/iPhone-silver.png',
+      img: 'img/iPhone-silver.png',
       price: 120000,
       memory: 256
     }, {
       name: 'Смартфон Apple iPhone 12 Pro 128GB Pacific Blue',
-      img: '/img/iPhone-blue.png',
+      img: 'img/iPhone-blue.png',
       price: 98699,
       memory: 128
     }];
@@ -105,6 +135,8 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!target.closest('.characteristics__list')) {
         closeAllDrops();
       }
+
+      ;
     });
   };
   /* Пишем функцию чтобы при нажатии на кнопку открывалось модальное окно */
@@ -156,9 +188,67 @@ document.addEventListener('DOMContentLoaded', function () {
     cardDetailsButtonBuy.addEventListener('click', openModal);
     cardDetailsButtonDelivery.addEventListener('click', openModal);
   };
+  /* Пишем функцию render cross-sell */
+
+
+  var renderCrossSell = function renderCrossSell() {
+    var COUNT_ROW_GOODS = 4;
+    var crossSellList = document.querySelector('.cross-sell__list');
+    var allGoods = [];
+    var wrapRender = null;
+    /* внутри пишем функцию которая будет перемешивать массив с товаром */
+
+    var shuffle = function shuffle(arr) {
+      return arr.sort(function () {
+        return Math.random() - 0.5;
+      });
+    };
+
+    var crossSellAdd = document.querySelector('.cross-sell__add');
+
+    var createCrossSellItem = function createCrossSellItem(good) {
+      var picture = good.photo,
+          name = good.name,
+          price = good.price;
+      var liItem = document.createElement('li');
+      liItem.innerHTML = "\n          <article class=\"cross-sell__item\">\n\t\t\t\t\t\t\t<img class=\"cross-sell__image\" src=\"".concat(picture, "\" alt=\"\">\n\t\t\t\t\t\t\t<h3 class=\"cross-sell__title\">").concat(name, "</h3>\n\t\t\t\t\t\t\t<p class=\"cross-sell__price\">").concat(price, "\u20BD</p>\n\t\t\t\t\t\t\t<div class=\"button button_buy cross-sell__button\">\u041A\u0443\u043F\u0438\u0442\u044C</div>\n\t\t\t\t\t\t</article>\n          ");
+      return liItem;
+    };
+
+    var render = function render(arr) {
+      arr.forEach(function (item) {
+        crossSellList.append(createCrossSellItem(item));
+      });
+    };
+
+    var wrapper = function wrapper(fn, count) {
+      var counter = 0;
+      return function () {
+        if (counter === count) return;
+        counter++;
+        return fn.apply(void 0, arguments);
+      };
+    };
+    /* фукция которая будет принимать список товаров и перемешивать их в рандомном порядке */
+
+
+    var createCrossSellList = function createCrossSellList(goods) {
+      wrapRender = wrapper(render, parseInt(goods.length / COUNT_ROW_GOODS) + 1);
+      allGoods.push.apply(allGoods, _toConsumableArray(shuffle(goods)));
+      var fourItem = allGoods.splice(0, COUNT_ROW_GOODS);
+      wrapRender(fourItem);
+    };
+
+    crossSellAdd.addEventListener('click', function () {
+      wrapRender(allGoods.splice(0, COUNT_ROW_GOODS));
+    });
+    getData('cross-sell-dbase/dbase.json', createCrossSellList);
+  };
 
   tabs();
   accordion();
   modal();
+  renderCrossSell();
+  amenu('.header__menu', '.header-menu__list', '.header-menu__item', '.header-menu__burger');
 });
 //# sourceMappingURL=main.dev.js.map
