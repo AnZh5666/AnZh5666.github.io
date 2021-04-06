@@ -1,0 +1,631 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    background-color: #f5f5f5f4;
+    font-family: 'Robot', sans-serif;
+    
+}
+.container { /*основной большой контейнер, куда входят карточки*/
+    max-width: 1200px;/* для адаптивной верст */
+    margin: 0 auto;
+    padding: 60px 15px;/*внутренний отступ у контейнера сверху и снизу*/
+}
+@media (max-width: 1200px) { /* для адаптивной верст */ 
+    .container { 
+       max-width: 830px;
+    }
+} 
+
+@media (max-width: 829px) { 
+    .container { 
+       max-width: 600px;
+    }
+} 
+
+.row {
+    display: flex; /*выравниваем блоки в ряд*/
+    justify-content: space-between; /*выравниваем по краям с отступом друг от друга*/
+}
+.main {
+    width: 870px;
+        
+}
+.sidebar {
+    width: 270px;
+    min-width: 200px; /*для адаптивной верст */
+    }
+
+ @media (max-width:829px) {
+   .sidebar { 
+    margin-left: 0 !important;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    bottom: 0;
+    left: 0px;
+    background-color: ivory;
+    padding: 15px;
+    box-shadow: 0px 0px 20px 4 px rgb(0 0 0 / 37%);
+    overflow-y: scroll;
+    transform: translateX(-150%);
+    transition: transform 0.5s ease-in;
+    }
+   
+ .sidebar--mobile-active {
+     transform: translateX(-0%);
+    }
+
+.main + .sidebar {
+    margin-left: 30px; /* для адаптивной верст */
+    }
+
+} 
+.cards-holder {/*создает отступы между карточками*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 599px) {/* для адаптивной верстки -
+    если размер меньше 600, то карточки выстраиваются
+    в одну колонку по центру */
+    .cards-holder {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.cards-holder >.card_link {
+    margin-bottom: 30px;
+}
+
+.card-link-hidden {
+    display: none !important;
+}
+
+.card-link { 
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+    }
+.card-link:hover {
+    opacity: 0.7;/*при наведении на карточку она
+    немного меняет цвет*/
+    transform: translateY(-5px);/*при наведении на карточку
+    немного ее выдвигает*/
+}
+
+/*стилизация карточек*/
+.card {
+    position: relative;
+    background-color: #ffffff;/*фон для карточки*/
+    width: 270px; 
+    
+}
+
+.card__badges {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+}
+.card__badges >* + *{/*обращение к элементу справа*/
+   margin-left: 10px; 
+}   
+.card__badge {
+    display: inline-block; /*выстроили два бейджа в линию и разделились*/
+    height: 22px;
+    padding: 0 10px; 
+    background-color: #525252;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+    }
+
+.card__badge--class {
+    background-color: #FFCF26;
+}
+
+.card__badge--credit {
+    background-color: #11BE75;
+}
+
+.card__content {
+padding: 15px /*сверху*/ 15px /*слева и права*/ 20px/*снизу*/;
+}
+.card_title {
+    margin: 0;/*сброс всех предустановок*/
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.16;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #000000;
+
+}
+.card_term {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 10px;
+    
+}
+.card_metro {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.card_metro::before {/*значок метро*/
+    content:"";
+    margin-right: 10px;
+    display: inline-block;/*значок в ряду с текстом*/
+    vertical-align: baseline; /*выравнивание значка в строке*/
+    width: 16px;
+    height: 11px;
+    background-image: url('./../img/icons/Vector.svg');
+    background-repeat: no-repeat;
+    background-size: initial;
+    }
+
+.card_address {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    color: #777777;
+}
+/*стилизация кнопки "ПОКАЗАТЬ ЕЩЕ"*/
+.show_more {
+    width: 100%;
+    height: 80px;
+    background-color: #E5E5E5;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    color: #4290C9;
+    cursor: pointer;
+    transition: background-color 0.2c ease-in;
+} 
+.show_more:hover {
+    background-color: #cccccc;
+}
+.show_more img {
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: bottom;/*значок выравнивает с текстом*/
+}
+.widjet + .widjet {
+    margin-top: 30px;/* отступ между виджетами*/
+}
+.widjet__title {
+    position: relative;
+    margin-bottom: 20px;
+    font-family: Roboto;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 18px;
+    line-height: 1.16;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* создание стрелочки вверх в правом углу*/
+.widjet__title::after {
+    content:'';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url('./../img/icons/chevron-up.svg');
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: center;
+}
+
+/* чтобы стрелочка (СКРЫТЬ) на виджете переворачивалась вниз */
+.widjet__title--active::after {
+    transform: rotate(180deg);
+}
+
+.widjet__body--hidden {
+    display: none;
+}
+
+.location_row {
+display: flex;
+}
+
+.location_row:first-child {
+    border-radius: 4px 4px 0px 0px;
+    overflow: hidden; /* чтобы элементы не выходили за пределы */
+    border: 1px solid #d6d6d6;
+    border-top: none;
+}
+
+.location_row:last-child {
+    border-radius: 0px 0px 4px 4px;
+    overflow: hidden; /* чтобы элементы не выходили за пределы */
+    border: 1px solid #d6d6d6;
+}
+
+.location_btn {
+    flex-grow: 1;/* чтобы кнопки занимали все место */
+    font-family: inherit;
+    height: 50px;
+    padding: 0 15px;
+    text-align: center;
+    
+    background-color: transparent; /* прозрачный фон */
+    border: none;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: 50px;
+    color:#3C3C3C;
+    
+    cursor: pointer;
+
+    /* добавление плавного перехода */
+    transition: background-color 0.2s ease-in;
+}
+/* добавление поведения кнопок при наведении курсором*/
+.location_btn:hover {
+    background-color: #fff0bb;
+}
+/* цвет чекбоксов при выборе */
+.location__checkbox {/*скрытие чекбоксов с экрана*/
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    opacity: 0;
+    appearance: none;
+}
+.location__checkbox:checked + .location_btn {
+    background-color:#FFCF26;
+}
+.location__checkbox:checked + .location_btn:hover {
+    background-color:#d3b64e;
+}
+
+
+/* БЛОК ОФОРМЛЕНИЯ РАДИОКНОПОК*/
+
+.radio {
+    display: block;/* чтобы были в столбик кнопки */
+    cursor: pointer;
+}
+
+/* отступление между кнопками*/
+.radio + .radio {
+    margin-top: 15px;
+}
+
+/* сокрытие реальныъ радиокнопок*/
+.radio__real {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    opacity: 0;
+    appearance: none;
+}
+
+.radio__fake {/* рисование кнопки*/
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    background-color: #ffffff;
+    border: 1px solid #777777;
+    border-radius: 50%;
+    vertical-align: bottom;
+}
+
+/* фон невыбранной кнопки */
+.radio__real:checked + .radio__fake {
+    background-color: #ffe074;
+}
+
+/* когда выбрана реальная кнопка то фейковая оттображается
+ вот с такой черной точкой внутри*/
+.radio__real:checked + .radio__fake::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background: #3c3c3c;
+    transform: translate(-50%,-50%);
+}
+
+.radio__real:checked ~ .radio__title {
+    font-weight: 700; /* селектор тильда (~) позволяет
+    выбрать соседа справа */
+}
+
+.radio__title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.18;
+    color: black;
+} 
+
+/* Блок создание чекбоксов для 3 виджета */
+
+.checkbox {
+    display: block;/* чтобы были в столбик кнопки */
+    cursor: pointer;
+}
+
+.checkbox--hidden {
+    display: none;
+}
+
+/* отступление между кнопками*/
+.checkbox + .checkbox {
+    margin-top: 15px;
+}
+.checkbox__real {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    opacity: 0;
+    appearance: none;
+} 
+.checkbox__fake {
+    position: relative;
+    display: inline-block;
+     margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid #777777;
+    border-radius: 2px;
+    vertical-align: bottom;
+}
+
+/* когда выбран реальный чекбокс, фековый показывает вот что */
+.checkbox__real:checked + .checkbox__fake {
+    background-color: #FFE074;
+}
+
+/* рисуем галочку внутри чекбокса*/
+.checkbox__real:checked + .checkbox__fake::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-image: url('./../img/icons/check.svg');
+    background-size: initial;
+    background-position: center;
+    transform: translate(-50%,-50%);
+}
+
+.checkbox__title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.18;
+    color: black;
+}
+
+.checkbox__real:checked ~ .checkbox__title {
+    font-weight: 700; /* селектор тильда (~) позволяет
+    выбрать соседа справа */
+}
+
+.widjet__btn-show-hidden {
+    display: inline-block;
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 19px;
+    color: #4290c9;
+    cursor: pointer;
+    transition: color 0.3s ease-in;
+    margin-top: 15px;
+}
+
+.widjet__btn-show-hidden:active, .widjet__btn-show-hidden:focus {
+    outline: none;
+}
+
+.widjet__btn-show-hidden:hover {
+    color: #0cc954;
+    text-decoration: underline;
+}
+
+.widjet__hidden + .widjet__show-hidden {
+    margin-top: 15px;
+}
+
+/* стилизация ползунка*/
+.toggle {
+    cursor: pointer;
+}
+
+.toggle__real {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    opacity: 0;
+    appearance: none;
+}
+
+.toggle__fake { /* рисование полузнка */
+    position: relative;
+    display: inline-block; /* чтобы оттображался в линию */
+    width: 37px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: #C4C4C4;
+    border-radius: 10px;
+    vertical-align: bottom;
+
+}
+.toggle__fake::before   { /* рисование черного круглежка в ползунке */
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: #3C3C3C;
+    border-radius: 50%;
+    transition: all 0.2s ease-in; /* плавное передвижение полузнка*/
+}
+
+/* ползунок в активном состоянии */
+.toggle__real:checked + .toggle__fake {
+    background-color: #e6b711;
+}
+ 
+.toggle__real:checked + .toggle__fake::before {
+    left: 19px;
+    /*right: 2px; /* перемещение ползунка вправо*/
+}
+    
+.toggle__title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.18;
+    color: black;
+}
+.toggle__real:checked ~ .toggle__title {
+    font-weight: 700;
+}
+
+/* стилизация кнопок ПРИМЕНИТЬ ФИЛЬТРЫ и СБРОСИТЬ ФИЛЬТРЫ*/
+.form__btn {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background-color: transparent;
+    font-family: Roboto;
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in;
+    }
+
+ .form__btn img {
+     display: inline-block;
+     margin-right: 6px;
+     vertical-align: middle;
+     margin-top: -2px;
+ }
+    
+.form__btn:hover {
+        background-color: rgb(220, 222, 224);
+    }
+.form__btn + .form__btn {
+    margin-top: 10px;
+}
+
+.form__btn-submit {
+   background: #FFCF26;
+   border: none;
+   color: #000;
+}
+.form__btn-submit:hover {
+    background: #f8c304fb
+}
+
+/* создание кнопки вызывающий сайдбар, когда он скрыт*/
+.toggle-sidebar {
+    display: none;
+    position: fixed;
+    z-index: 9; /* чтобы кнопка былв всегда на виду */
+    right: 15px;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+    background-color:  rgb(167, 152, 152);
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 829px) { /* чтобы кнопка исчезала, когда в нормальнои формате
+    и сайдбар виден */
+    .toggle-sidebar {
+        display: flex;
+    }
+}
+
+.menu-icon-wrapper {
+    /*background: rgb(202, 196, 196);*/
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.menu-icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.788);
+}
+
+.menu-icon::before {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    content: "";
+    width: -20px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.76);
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+.menu-icon::after {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    content: "";
+    width: 20px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.719);
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+.menu-icon.menu-icon-active {
+    background-color: transparent;
+}
+.menu-icon.menu-icon-active::before {
+    transform: rotate(40deg);
+    top: 0px;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+.menu-icon.menu-icon-active::after {
+    transform: rotate(-40deg);
+    top: 0px;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
