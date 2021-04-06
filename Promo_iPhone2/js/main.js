@@ -40,19 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = [
             {
               name: 'Смартфон Apple iPhone 12 Pro 128GB Graphite',
-              img: '../img/iPhone-graphite.png',
+              img: 'img/iPhone-graphite.png',
               price: 99990,  
               memory: 128  
             },
             {
               name: 'Смартфон Apple iPhone 12 Pro 256GB Silver',
-              img: '../img/iPhone-silver.png',
+              img: 'img/iPhone-silver.png',
               price: 120000,   
               memory: 256
             },
             {
                name: 'Смартфон Apple iPhone 12 Pro 128GB Pacific Blue',
-               img: '../img/iPhone-blue.png',
+               img: 'img/iPhone-blue.png',
                price: 98699,
                memory: 128
             }
