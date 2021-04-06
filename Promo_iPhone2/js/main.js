@@ -51,10 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
               memory: 256
             },
             {
-               name: 'Смартфон Apple iPhone 12 Pro 128GB Pacific Blue',
-               img: 'img/iPhone-blue.png',
-               price: 98699,
-               memory: 128
+              name: 'Смартфон Apple iPhone 12 Pro 128GB Pacific Blue',
+              img: 'img/iPhone-blue.png',
+              price: 98699,
+              memory: 128
             }
         ];
         
