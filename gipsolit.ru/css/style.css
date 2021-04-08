@@ -71,14 +71,11 @@ section {
 }
 .main {
   padding: 3rem 0 5rem;
-  background: #ffffff url(../img/main-bg.jpg) center center no-repeat;
+  background: #ffffff url(img/main-bg.jpg) center center no-repeat;
   /* подзаголовок */
   /* зеленный ярлык */
   /* оплата по факту */
   /* Главная форма */
-}
-.main-content {
-  /* Главный заголовок */
 }
 .main-content h1 {
   margin-bottom: 2rem;
@@ -216,12 +213,12 @@ section {
 }
 .prev {
   left: 0;
-  background: url(/img/left-arrow.png) center no-repeat;
+  background: url(img/left-arrow.png) center no-repeat;
   background-size: 70%;
 }
 .next {
   right: 0;
-  background: url(/img/right-arrow.png) center no-repeat;
+  background: url(img/right-arrow.png) center no-repeat;
   background-size: 70%;
 }
 /* Секция с ценами */
