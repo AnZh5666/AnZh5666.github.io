@@ -71,7 +71,7 @@ section {
 }
 .main {
   padding: 3rem 0 5rem;
-  background: #ffffff url(/img/main-bg.jpg) center center no-repeat;
+  background: #ffffff url(../img/main-bg.jpg) center center no-repeat;
   /* подзаголовок */
   /* зеленный ярлык */
   /* оплата по факту */
