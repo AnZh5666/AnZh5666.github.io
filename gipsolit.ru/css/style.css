@@ -213,7 +213,7 @@ section {
 }
 .prev {
   left: 0;
-  background: url(../img/left-arrow.png) center no-repeat;
+  background: url(/gipsolit.ru/img/left-arrow.png) center no-repeat;
   background-size: 70%;
 }
 .next {
