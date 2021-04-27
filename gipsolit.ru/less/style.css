@@ -90,12 +90,10 @@ textarea:focus {
   display: table-cell;
 }
 /* Оформление блока MAIN */
-.main {
+main {
   padding: 3rem 0 5rem;
-  background-image: url(img/main-bg.png);
-  /* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
+  background: url('img/main-bg.png') center center no-repeat;
+  background-size: cover; 
   /* подзаголовок */
   /* зеленный ярлык */
   /* оплата по факту */
