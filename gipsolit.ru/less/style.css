@@ -92,7 +92,7 @@ textarea:focus {
 /* Оформление блока MAIN */
 .main {
   padding: 3rem 0 5rem;
-  background: #fff url(/img/main-bg.jpg) center center no-repeat;
+  background: #fff url(img/main-bg.jpg) center center no-repeat;
   background-size: cover;
   /* подзаголовок */
   /* зеленный ярлык */
@@ -221,12 +221,12 @@ textarea:focus {
 }
 .prev {
   left: 0;
-  background: url(/img/left-arrow.png) center no-repeat;
+  background: url(img/left-arrow.png) center no-repeat;
   background-size: 70%;
 }
 .next {
   right: 0;
-  background: url(/img/right-arrow.png) center no-repeat;
+  background: url(img/right-arrow.png) center no-repeat;
   background-size: 70%;
 }
 /* конец блока оформления слайдера */
@@ -274,7 +274,7 @@ textarea:focus {
   display: inline-block;
   width: 0.9rem;
   height: 0.9rem;
-  background: url(/img/checked.svg) no-repeat center;
+  background: url(img/checked.svg) no-repeat center;
   background-size: 100%;
   vertical-align: middle;
   margin-right: 0.7rem;
@@ -290,7 +290,7 @@ textarea:focus {
 /* Оформление секции с отзывами */
 .feedback {
   padding: 3rem;
-  background: url(/img/feedback/bg.jpg) no-repeat center;
+  background: url(img/feedback/bg.jpg) no-repeat center;
   background-size: cover;
 }
 .feedback-prev-btn {
@@ -370,7 +370,7 @@ textarea:focus {
 .scheme {
   padding: 3rem;
   margin-top: 1rem;
-  background: url(/img/shemes/scheme-bg.png) right -15rem bottom -10rem no-repeat;
+  background: url(img/shemes/scheme-bg.png) right -15rem bottom -10rem no-repeat;
   background-size: 49rem;
 }
 /* Оформление все на 100% включено */
@@ -457,14 +457,14 @@ textarea:focus {
   opacity: 0.5;
 }
 .problems-list_bad ul li::before {
-  background: url(/img/Problems/problem.png) center no-repeat;
+  background: url(img/Problems/problem.png) center no-repeat;
   background-size: 60%;
 }
 .problems-list_good {
   border-color: #46b814;
 }
 .problems-list_good ul li::before {
-  background: url(/img/Problems/good.png) center no-repeat;
+  background: url(img/Problems/good.png) center no-repeat;
   background-size: 60%;
 }
 /* Оформление блока Материалы */
@@ -496,7 +496,7 @@ textarea:focus {
 }
 /* Оформление блока Контакты */
 .contacts {
-  background: #fff url(/img/contacts-bg.jpg) center no-repeat;
+  background: #fff url(img/contacts-bg.jpg) center no-repeat;
   background-size: cover;
   /* Заголовок для формы */
 }
