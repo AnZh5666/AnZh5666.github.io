@@ -274,7 +274,7 @@ main {
   display: inline-block;
   width: 0.9rem;
   height: 0.9rem;
-  background: url('img/checked.svg') no-repeat center;
+  background-image: url('img/checked.svg') no-repeat center;
   background-size: 100%;
   vertical-align: middle;
   margin-right: 0.7rem;
