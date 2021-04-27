@@ -71,7 +71,7 @@ section {
 }
 .main {
   padding: 3rem 0 5rem;
-  background: url(/gipsolit.ru/img/main-bg.jpg) center center no-repeat;
+  background: url(img/main-bg.jpg) center center no-repeat;
   /* подзаголовок */
   /* зеленный ярлык */
   /* оплата по факту */
@@ -213,12 +213,12 @@ section {
 }
 .prev {
   left: 0;
-  background: url(/gipsolit.ru/img/left-arrow.png) center no-repeat;
+  background: url(img/left-arrow.png) center no-repeat;
   background-size: 70%;
 }
 .next {
   right: 0;
-  background: url(../img/right-arrow.png) center no-repeat;
+  background: url(img/right-arrow.png) center no-repeat;
   background-size: 70%;
 }
 /* Секция с ценами */
@@ -265,7 +265,7 @@ section {
   display: inline-block;
   width: 0.9rem;
   height: 0.9rem;
-  background: url(../img/checked.svg) no-repeat center;
+  background: url(img/checked.svg) no-repeat center;
   background-size: 100%;
   vertical-align: middle;
   margin-right: 0.7rem;
