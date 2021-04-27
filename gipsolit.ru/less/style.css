@@ -92,7 +92,9 @@ textarea:focus {
 /* Оформление блока MAIN */
 .main {
   padding: 3rem 0 5rem;
-  background: #fff url(img/main-bg.jpg) center center no-repeat;
+  background: url(img/main-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   /* подзаголовок */
   /* зеленный ярлык */
