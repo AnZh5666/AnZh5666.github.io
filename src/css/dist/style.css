@@ -1,0 +1,597 @@
+@font-face {
+  font-family: 'SFProText';
+  src: url('/fonts/FontsFree-Net-SFProText-Regular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/fonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/fonts/OpenSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/fonts/OpenSans-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/fonts/OpenSans-SemiBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  background: #E5E5E5;
+}
+body {
+  background: #fff;
+  padding-top: 12px;
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-bottom: 100px;
+}
+.header {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 48px rgba(0, 0, 0, 0.16);
+  font-family: 'OpenSans';
+}
+/* Оформление линий с контактами */
+.contact-line {
+  display: flex;
+  justify-content: space-around;
+  background: #fed600;
+  font-family: 'OpenSans';
+  font-size: 13px;
+  padding: 7px 50px 10px 70px;
+  flex-wrap: nowrap;
+}
+.contact-line .drop-down-city {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.contact-line .container-phone div {
+  display: none;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: right;
+}
+.contact-line .select-city {
+  text-align: right;
+  font-family: 'OpenSans';
+  font-weight: 600;
+  font-size: 13px;
+  background-color: #fed600;
+  border: none;
+}
+.contact-line .select-city:focus {
+  outline: none;
+}
+.contact-line .select-city option {
+  font-size: 13px;
+  line-height: 18px;
+  background-color: #fff;
+}
+.contact-line .time-work {
+  margin-left: 15px;
+  font-family: 'OpenSans';
+  font-weight: 600;
+  font-size: 13px;
+}
+.contact-line .right-contact {
+  display: flex;
+  justify-content: space-around;
+}
+.contact-line .contact-block {
+  display: flex;
+  justify-content: space-evenly;
+}
+.contact-line .contact-block .to_write a,
+.contact-line .contact-block .to_call a {
+  text-decoration: none;
+  color: black;
+  font-family: 'OpenSans';
+  font-weight: 600;
+  font-size: 13px;
+  margin-right: 15px;
+}
+.contact-line .contact-social_web {
+  text-align: center;
+  padding-left: 35px;
+}
+.contact-line .contact-social_web a {
+  text-decoration: none;
+  margin-right: 15px;
+}
+/* конец блока формления контактов */
+/* Оформление блока меню */
+.main {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 16px;
+  position: relative;
+  padding-left: 120px;
+  /* Оформление блока майн меню */
+}
+.main-first-line {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-bottom: 2px #BDBDBD;
+}
+.main-title-color {
+  color: #D2001C;
+}
+.main-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.main-logo p {
+  margin-left: 16px;
+  font-family: 'OpenSans';
+  font-style: italic;
+  font-size: 13px;
+}
+.main-logo-title {
+  width: 133px;
+  height: 36px;
+  left: 248px;
+  top: 78px;
+  font-family: 'OpenSans';
+  font-weight: 400;
+  font-style: italic;
+  font-size: 13px;
+}
+.main .ya-market {
+  margin-left: 32px;
+  border-radius: 6px;
+  background: #FFFFFF;
+  width: 105px;
+  height: 60px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
+  text-align: center;
+  padding: 5px 12px;
+}
+.main-search {
+  width: 35%;
+  margin-left: 12px;
+}
+.main-search .search-input {
+  position: relative;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: 'OpenSans';
+  font-weight: 600;
+  font-size: 13px;
+  color: #9E9E9E;
+}
+.main-search .search-input:focus {
+  outline: none;
+}
+.main-search-btn {
+  position: absolute;
+  padding: 9px 12px;
+  margin-top: 4px;
+  font-family: 'OpenSans';
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 13px;
+  text-align: center;
+  transform: translate(-71px);
+  color: #D2001C;
+  background: #FFFFFF;
+  border: 2px solid #D2001C;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.main .main-search-btn:hover,
+.main .main-search-btn:focus {
+  background-color: #D2001C;
+  color: #FFFFFF;
+  outline: none;
+}
+.main .enter-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'OpenSans';
+  font-weight: 600;
+  font-size: 13px;
+}
+.main .enter-block a {
+  text-decoration: none;
+  color: black;
+  margin-left: 10px;
+}
+.main .law-basket-btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 9px 14px;
+  background: #D2001C;
+  color: #FFFFFF;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-family: 'OpenSans';
+  font-weight: 600;
+  font-size: 13px;
+  width: auto;
+}
+.main .law-basket-btn .btn-img {
+  margin-right: 10px;
+}
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 28px;
+  padding-bottom: 22px;
+  padding-left: 120px;
+  padding-right: 120px;
+  font-family: 'OpenSans';
+  font-weight: 400;
+  font-size: 13px;
+  border-bottom: 1px solid #cfcece;
+  flex-wrap: wrap;
+}
+.main-menu .action a {
+  text-decoration: none;
+  color: black;
+}
+/* Оформление выпадающего меню */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: 'OpenSans';
+  font-weight: 700;
+  font-size: 13px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.drawpdown-menu-title {
+  cursor: pointer;
+}
+.drawpdown-menu-title::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-image: url('/img/vector/dropdawn-menu.png');
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: center;
+}
+.drawpdown-menu-title--active::after {
+  transform: rotate(180deg);
+}
+.drawpdown-menu-body {
+  display: none;
+  margin-top: 20px;
+  width: 100px;
+  position: relative;
+}
+.drawpdown-menu-body ul {
+  position: absolute;
+  background: #fff;
+  padding: 12px;
+  width: 100%;
+}
+.drawpdown-menu-body li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+.drawpdown-menu-body li :hover {
+  background: #bebebe;
+}
+.drawpdown-menu-body a {
+  text-decoration: none;
+  color: black;
+}
+.drawpdown-menu-body--visible {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+/* конец блока выпадающего меню */
+/* Оформление секции работа мечта с текстом */
+.dream-work {
+  text-align: center;
+  padding: 50px 154px;
+}
+.container-block-foto img {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+.container-block-text {
+  display: flex;
+  justify-content: space-between;
+}
+.container-block-text .column-left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+}
+.container-block-text .column-left p {
+  font-size: 27px;
+  margin-top: 25px;
+}
+.container-block-text .column-left button {
+  margin-top: 40px;
+  margin-bottom: 25px;
+  padding: 8px 10px;
+  font-size: 16px;
+  background-color: #D2001C;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  max-width: 50%;
+  min-height: fit-content;
+}
+.container-block-text .column-left small {
+  font-family: 'SFProText';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.7px;
+  color: #c4c4c4;
+}
+.container-block-text .column-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 16px;
+}
+.container-block-text .column-right .right-column-text {
+  padding-top: 23px;
+  font-family: 'SFProText';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.7px;
+  text-align: justify;
+}
+.container-block-text .column-right .right-column-text .color-text {
+  color: #D2001C;
+}
+/* Конец блока работа мечты с текстом */
+/* оформление секции ABOUT */
+.about {
+  padding-left: 154px;
+  padding-top: 70px;
+  font-family: 'SFProText';
+  font-size: 24px;
+  font-weight: 500;
+  text-align: left;
+  padding-bottom: 75px;
+}
+.about-txt {
+  display: flex;
+  font-family: 'SFProDisplay';
+  font-size: 16px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.about-txt :first-child {
+  color: red;
+}
+.about-txt a {
+  color: #4D4D4D;
+  margin-top: 10px;
+}
+.about-txt a img {
+  margin-left: 15px;
+}
+/* -- end ABOUT */
+/* Оформление блока Slider */
+.video-slider {
+  padding-left: 50px;
+  padding-top: 70px;
+  padding-bottom: 50px;
+  padding-right: 50px;
+  background: #f9f9f9;
+}
+.slider {
+  width: 1100px;
+  height: 310px;
+  margin: 30px;
+  overflow: hidden;
+}
+.slider-line {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  left: 0;
+  transition: all ease 1s;
+  /*  overflow: hidden; */
+}
+.slider-line img {
+  margin-right: 60px;
+}
+.slider-title {
+  display: flex;
+  margin-bottom: 60px;
+  font-family: 'SFProDisplay';
+  font-size: 36px;
+  color: #222222;
+}
+.slider-title .slider-btn {
+  justify-self: self-end;
+}
+.next {
+  background: #eeecec;
+  width: 25px;
+  height: 27px;
+  border: 1px solid #E5E5E5;
+  opacity: 0.5;
+}
+.prev {
+  background: #eeecec;
+  opacity: 0.5;
+  width: 25px;
+  height: 27px;
+  border: 1px solid #E5E5E5;
+  margin-right: 5px;
+}
+/* Адаптив для экранов менее 1100рх */
+@media (max-width: 1100px) {
+  body {
+    padding: 0;
+  }
+  .contact-line {
+    padding: 10px;
+    height: 20vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .contact-line .drop-down-city {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-line .right-contact {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-line .right-contact .contact-social_web {
+    margin-top: 15px;
+  }
+  .contact-line .right-contact .contact-social_web a {
+    margin-right: 10px;
+  }
+  .main {
+    padding: 25px 0 0;
+  }
+  .main div {
+    margin-bottom: 25px;
+  }
+  .main-first-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-first-line .ya-market {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+  .main-first-line .main-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-first-line .main-search-btn {
+    position: static;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-left: 125px;
+  }
+  .main-first-line .main-search .search-input {
+    width: 100%;
+    font-size: 8px;
+    background-color: #fff;
+  }
+  .main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-menu .action {
+    margin-bottom: 15px;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav .drawpdown-menu-title {
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+  .nav .drawpdown-menu-title::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url('/img/right_arrow.png');
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: center;
+  }
+  .nav .drawpdown-menu-body--visible {
+    position: relative;
+  }
+  .nav .drawpdown-menu-body--visible ul {
+    position: absolute;
+    left: 150px;
+  }
+  .nav .drawpdown-menu-body--visible ul li {
+    margin-bottom: 10px;
+  }
+}
+/* Конец адаптивного блока менее 1100px */
+/* Адаптив для экранов менее 670рх */
+@media (max-width: 670px) {
+  .dream-work {
+    padding: 20px 50px;
+  }
+  .container-block-text {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-block-text .column-left {
+    width: auto;
+    align-self: flex-start;
+  }
+  .container-block-text .column-left p {
+    font-size: 20px;
+  }
+  .container-block-text .column-left button {
+    font-size: 12px;
+    min-width: 50%;
+  }
+  .about {
+    padding: 20px 50px;
+    font-size: 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-txt {
+    margin-top: 15px;
+  }
+  .video-slider {
+    padding: 20px 50px;
+  }
+}
+/*конец адаптивного блока менее 670рх */
+
+/*# sourceMappingURL=style.css.map */
