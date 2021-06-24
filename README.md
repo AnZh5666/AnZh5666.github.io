@@ -8,4 +8,4 @@
 
 [Сайт интерент магазина Wb](https://anzh5666.github.io/wb_shop/ "магазин wilberies")
 
-[Top-3D-Shop](https://anzh5666.github.io/src/dist/index.html/ "Top-3d-Shop")
+
