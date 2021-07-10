@@ -8,4 +8,6 @@
 
 [Сайт интерент магазина Wb](https://anzh5666.github.io/wb_shop/ "магазин wilberies")
 
+[Интернет-магазин Lamoda](https://anzh5666.github.io/internet_shop_lamoda/index.html/ "магазин lamoda")
+
 
