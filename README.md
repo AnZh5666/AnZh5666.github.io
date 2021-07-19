@@ -8,7 +8,7 @@
 
 [Сайт интерент магазина Wb](https://anzh5666.github.io/wb_shop/ "магазин wilberies")
 
-[Интернет-магазин Lamoda](https://anzh5666.github.io/internet_shop_lamoda/index.html/ "магазин lamoda")
+[Интернет-магазин Lamoda](https://anzh5666.github.io/internet_shop_lamoda/goods.html "магазин lamoda")
 
 [Заготовка простенького сайта](https://anzh5666.github.io/ppi/index.html/ "PPI")
 
