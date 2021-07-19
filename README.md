@@ -10,5 +10,5 @@
 
 [Интернет-магазин Lamoda](https://anzh5666.github.io/internet_shop_lamoda/goods.html "магазин lamoda")
 
-[Заготовка простенького сайта](https://anzh5666.github.io/ppi/index.html/ "PPI")
+[Заготовка простенького сайта](https://anzh5666.github.io/ppi/index.html "PPI")
 
