@@ -1,15 +1,15 @@
 /* установка шрифтов */
 @font-face {
   font-family: 'ProximaNova_reg';
-  src: url('../fonts/ProximaNova-Regular.eot');
-  src: url('../fonts/ProximaNova-Regular.eot');
+  src: url('fonts/ProximaNova-Regular.eot');
+  src: url('fonts/ProximaNova-Regular.eot');
   src: local('Proxima Nova Regular'), local('ProximaNova-Regular'), url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Regular.woff') format('woff'), url('../fonts/ProximaNova-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'ProximaNova_bold';
-  src: url('../fonts/ProximaNova-Bold.eot');
+  src: url('fonts/ProximaNova-Bold.eot');
   src: local('Proxima Nova Bold'), local('ProximaNova-Bold'), url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Bold.woff') format('woff'), url('../fonts/ProximaNova-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
@@ -71,7 +71,7 @@ section {
 }
 .main {
   padding: 3rem 0 5rem;
-  background: url(../img/main-bg.png) center center no-repeat;
+  background: url(img/main-bg.png) center center no-repeat;
  /*  background-position: center;
   background-repeat: no-repeat; */
   /* подзаголовок */
